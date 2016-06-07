@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6-formulario Básico </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+</head>
+<body>
+	<form action="#servidor" method="get">
+		<fieldset>
+			<legend>Datos Conexion</legend>
+			<label for="n">Nombre Usuario</label><br>
+			<input id="n" type="text">
+			<br>
+			<label>Contraseña</label><br>
+			<input type="password">
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Datos Personales</legend>
+			<label>Sexo</label>
+			<br>
+			<input type="radio" name="sexo" value="Mujer" checked><label>Mujer</label>
+			<br>
+			<input type="radio" name="sexo" value="Hombre"><label>Hombre</label>
+			<br>
+			<br>
+			<label for="cine">Gustos</label> <br>
+			<input type="checkbox" value="Ciencia"><label>Ciencia</label> <br>
+			<input type="checkbox" value="Deporte"><label>Deportes</label> <br>
+			<input id="cine" type="checkbox" value="Cine"><label>Cine</label> <br>
+			<br>
+			<label for="p">Estudios</label> <br>
+			<select>
+				<option value="sin">Sin Estudios</option>
+				<option id="p" value="Primarios">Primarios</option>
+				<option value="Universitarios">Universitarios</option>
+			</select>
+			<br><br>
+			<label>Comentarios</label><br>
+			<textarea rows="10" cols="15" placeholder="Deja tus comentarios"></textarea>
+		</fieldset>
+		<br>
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Limpiar">
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>ajax getJSON</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function(){
+	console.log("cargado");
+	$('input').on('click',function(){
+		console.log("pinchado");
+		$.getJSON('http://jsonplaceholder.typicode.com/posts',function(resp_array){
+				$('div').html("<table></table>");
+				// cabecera con las claves
+				$.each(resp_array[0],function(k,v){
+						$('table').append("<th>"+ k +"</th>")
+				})
+				// cada fila con los valores
+				$.each(resp_array,function(pos_array,jason){
+					$('table').append('<tr>');
+					$.each(jason,function(k,v){
+						$('tr:last-of-type').append("<td>"+ v +"</td>")
+
+					})
+
+
+				})
+			})
+	})
+});
+	</script>
+</head>
+<body>
+	<p>Pulsar boton para llamar al servidor con AJAX</p>
+	<div style="background: lightgreen;">
+		ESPERAR RESPUESTA AJAX
+	</div>
+	<br>
+	<input type="button" value="peticion">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>quijote</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">
+		window.onload = function(){
+			var mip = document.getElementsByTagName('p');
+			mip[0].onclick = function(){
+				if ( mip.length === 1 ){
+					var nuevoP = document.createElement('p');
+					var textP = document.createTextNode("de cuyo nombre ...");
+					nuevoP.appendChild(textP);
+					mip[0].parentNode.appendChild(nuevoP);
+				}
+				else {
+					mip[1].parentNode.removeChild(mip[1]);
+				}
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<p>En un lugar de la mancha ...</p>
+</body>
+</html>

@@ -1,0 +1,4 @@
+/* con clase foco poner un borde naranja */
+.foco{
+	border: 3px solid DarkOrange;
+};

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>plantilla bootstrap</title>
+	<script src="js/20.storage.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<!-- guardar pares -->
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Introduce clave</label>
+				<input type="text" class="form-control" id="clave" placeholder="poner clave">
+			</div>
+			<div class="form-group">
+				<label>Introduce valor</label>
+				<input type="text" class="form-control" id="valor" placeholder="poner clave">
+			</div>
+			<input type="button" id="guardar" class="btn btn-info" value="guardar">
+		</form>	
+		<br>
+		<!-- buscar pares -->
+		<form class='form-inline'>
+			<div class="form-group">
+				<label>Clave a buscar</label>
+				<input type="text" class="form-control" placeholder"clave a buscar" id="claveBuscar">
+			</div>
+			<div class="form-group">
+				<label> valor encontrado </label>
+				<input type="text" class="form-control" id="valorBuscar" disabled>
+			</div>
+			<button type="button" id="buscar" class="btn btn-primary">Buscar</button>
+
+		</form>
+		<br>
+		<!-- borrar pares -->
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Clave a borrar</label>
+				<input type="text" class="form-control" id="claveBorrar">
+			</div>
+			<button type="button" class="btn btn-danger" id="borrar">Borrar</button>
+		</form>
+	</div>
+</body>

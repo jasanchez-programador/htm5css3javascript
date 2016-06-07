@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7. Validar Formulario</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<style type="text/css">
+	input:invalid{
+		border: 2px solid red;
+	}
+	</style>
+</head>
+<body>
+	<form action="#servidor" method="get">
+		<fieldset>
+			<legend>Datos</legend>
+			<label for="n">Nombre Usuario</label><br>
+			<input id="n" type="text" required pattern="^[a-zA-Z].*">
+			<br>
+			<label>Contraseña</label><br>
+			<input type="password" required pattern="^.{8}$">
+			<br>
+			<label>Sexo</label>
+			<br>
+			<input type="radio" name="sexo" value="Mujer" checked><label>Mujer</label>
+			<br>
+			<input type="radio" name="sexo" value="Hombre"><label>Hombre</label>
+			<br>
+			<br>
+			<label>Edad</label><br>
+			<input type="number" min="0" max"110" required>
+			<br>
+			<br>
+			<label>Fecha Nacimiento</label><br>
+			<input type="date" required>
+			<br>
+			<br>
+			<label>e-Mail</label><br>
+			<input type="mail" required>
+			<br><br>
+			<label>Teléfono Fijo</label><br>
+			<input type="tel" pattern="^[89]\d{8}$">
+			<br>
+			<label>Teléfono Móvil</label><br>
+			<input type="tel" pattern="^[67]\d{8}$">
+			<br><br>
+			<label>Comentarios</label><br>
+			<br>
+			<textarea rows="10" cols="15" placeholder="Deja tus comentarios"></textarea>
+		</fieldset>
+		<br>
+		<input type="submit" value="Enviar">
+		<input type="reset" value="Limpiar">
+		
+	</form>
+</body>
+</html>

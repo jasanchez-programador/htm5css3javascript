@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>ajax load</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log("cargado");
+			$('input').on('click',function(){
+				console.log("pinchado");
+				$('div').load('http://localhost:8000/SimularRespuestaServidor.html');
+			})
+
+		});
+	</script>
+</head>
+<body>
+	<p>Pulsar boton para llamar al servidor con AJAX</p>
+	<div style="background: lightgreen;">
+		ESPERAR RESPUESTA AJAX
+	</div>
+	<br>
+	<input type="button" value="peticion">
+</body>
+</html>

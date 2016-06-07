@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX load</title>		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input#boton').on('click', function(){
+				var us = $('input#stage').val();
+				$.post('http://localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso_tarde_xunta/AJAXRepuestaServidor.html',{'usuario':us});
+			})
+		});
+	</script>
+
+</head>
+<body>
+	<p> Introduce nombre de usuario Haz click en boton para GUARDARLO en el servidor</p>
+	<input type="text" id="stage">
+	<br><br>
+	<input type="button" id="boton" value="boton">
+</body>
+</html>

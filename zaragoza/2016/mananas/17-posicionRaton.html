@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>donde esta el ratón</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">
+		window.onload = function(){
+			var si_ie = navigator.userAgent.toLowerCase().indexOf("msie");
+			document.onclick = function(e){
+				var evento = e || window.event;
+				var posXPan = evento.screenX;
+				var posYPan = evento.screenY;
+				var posXNav = evento.clientX;
+				var posYNav = evento.clientY;
+				var posXPag = null;
+				var posYPag = null;
+				if ( si_ie < 0){
+					posXPag = posXNav + document.body.scrollLeft;
+					posYPag = posYNav + document.body.scrollTop;
+					var donde = "en if"
+				}
+				else {
+					posXPag = evento.pageX;
+					posYPag = evento.pageY;
+					var donde = "en else"
+				}
+				console.log("coordenadas Pantalla:");
+				console.log(posXPan + "," + posYPan);
+				console.log("coordenadas Navegador:")
+				console.log(posXNav + "," + posYNav);
+				console.log("coordenadas Página:")
+				console.log(posXPag + "," + posYPag);
+				console.log( "donde esta: " + donde);
+			}
+			console.log( "donde esta: " + donde);
+		}
+	</script>
+
+</head>
+<body>
+	<p>Mirar en consola donde esta ratón al hacer click</p>
+</body>
+</html>

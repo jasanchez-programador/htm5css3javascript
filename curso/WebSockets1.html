@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla Bootstrap</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/javascript/WebSockets1_cliente.js"></script>
+
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <div class="form-group">
+            <label for="main">Escribe en el chat quien eres</label>
+            <input type="text" id='main' class="form-control " placeholder="quien eres??">
+          </div>
+          <button type="submit" id="saludar" class="btn btn-primary">enviar</button>
+          <br>
+          <br>
+ <!--          <div class="form-group">
+            <label for="ws">Repuesta Servidor</label>
+            <input type="text" id='ws' class="form-control" disabled>
+          </div>
+          <br>
+  -->         <div class="form-group">
+            <label for="ws">chat</label>
+            <textarea col="20" rows="50" id="brdcst_ws" class="form-control" disabled></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

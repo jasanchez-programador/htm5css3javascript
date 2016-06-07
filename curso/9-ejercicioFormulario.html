@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>9-ejercicioFormulario</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+			}
+			body {
+				width: 55%;
+				padding-left: 35%;
+			}
+			/* al cojer el focus que quite el el segundo borde*/
+			:focus{
+				outline: none;
+			}
+			input:invalid {
+				border: 1px solid red;
+			}
+			input:valid {
+				border: 1px solid blue;
+			}
+
+		</style>
+	</head>
+	<body>
+		<form action="datos_enviados.html" method="get">
+			<fieldset>
+				<legend>Datos conexi&oacute;n</legend>
+				<label id="text">Nombre: </label><br>
+				<input type="text" pattern="^[a-zA-Z].*" maxlength='10' required='required' autofocus>	<br/><br/>
+				<label id="password">Contrase&ntilde;a: </label><br>
+				<input type="password" pattern=".{8}.*" required='required'><br/><br/>
+			</fieldset>
+			<fieldset>
+				<legend>Datos personales</legend>
+				<label id="number">Edad: </label><br>
+				<input type="number" min="0" max="110" required='required'>	<br/><br/>
+				<label id="date">Fecha de Nacimiento: </label><br>
+				<input type="date" required='required'>	<br/><br/>
+				<label id="email">Email: </label><br>
+				<input type="email" required='required'> <br/><br/>
+				<label id="radio">Fecha de Nacimiento: </label><br>
+				<input type="radio" value="hombre"><label>hombre</label><br>
+				<input type="radio" value="mujer" checked="checked"><label>mujer</label><br><br/>
+				<label id="telfijo">Tel&eacute;fono fijo: </label>
+				<input type="tel" pattern="^[89]\d{8}$" required='required'><br/>
+				<label id="telmovil">Tel&eacute;fono movil: </label>
+				<input type="tel" pattern="^[67]\d{8}$"><br/><br/>
+				<label id="textarea">Comentarios: </label><br>
+				<textarea col="20" rows="3"></textarea>	<br/><br/>				
+			</fieldset>
+			<input type="submit" value="submit">
+			<input type="reset" value="limpiar formulario">
+		</form>
+	</body>
+</html>

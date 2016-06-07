@@ -1,0 +1,49 @@
+@font-face { /* Copiar/Pegar del fichero stylesheet.css que nos genera www.fontsquirrel.com */
+    font-family: 'droid_sansregular';
+   	src: url('../fuentes/GOOGLE_ANDROID//droidsans-webfont.eot');
+   	src: url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.woff2') format('woff2'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.woff') format('woff'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.ttf') format('truetype'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.svg#droid_sansregular') format('svg');
+   	font-weight: normal;
+   	font-style: normal;
+}
+@font-face { /* Copiar/Pegar del fichero stylesheet.css que nos genera www.fontsquirrel.com */
+    font-family: 'kaushan_scriptregular';
+    src: url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.eot');
+    src: url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.woff') format('woff'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.ttf') format('truetype'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face { /* del fichero descargado accediendo a la url que te da la letra de 
+            GoogleFonts en  */
+  font-family: 'Mystery Quest';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fuentes/GoogleFonts/MysteryQuest.woff2') format('woff2'),
+}
+
+
+span#titulo1{
+	font: bold 36px "kaushan_scriptregular";
+}
+span#titulo2{
+	font: bold 20px "droid_sansregular";
+}
+span#titulo3 {
+  font-family: 'Mystery Quest', cursive;
+}
+
+/*@import url(https://fonts.googleapis.com/css?family=Mystery+Quest);
+
+span#titulo3 {
+  font-family: 'Mystery Quest', cursive;
+}
+*/

@@ -1,0 +1,37 @@
+<head>
+	<title>WebSockets</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/36-webSocketWorker.js"></script>
+
+</head>
+<body>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="form-group col-md-offset-3 col-md-3">
+				<label>Saluda en el chat</label>
+				<input id="saludo" type="text" class="form-control">
+			</div>
+		</div>
+		<div class="row">
+			<input id="enviar" type="button" class="col-md-offset-4 btn btn-primary" value="enviar">
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="form-group col-md-offset-3 col-md-3">
+				<label>CHAT</label>
+				<textarea id="respuesta" class="form-control" disabled cols="20" rows="50"></textarea>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

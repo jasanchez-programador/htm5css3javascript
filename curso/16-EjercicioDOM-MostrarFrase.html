@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio DOM -- Mostrar la frase</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var inicio_frase = document.getElementById("iniciofrase");
+			inicio_frase.onclick=function(){
+				var num_a = document.getElementsByTagName("label");
+				var padre = inicio_frase.parentNode;
+				if (num_a.length === 1){
+					var texto = document.createTextNode("de cuyo nombre no quiero acordarme ...");
+					var fin_frase = document.createElement("label");
+					fin_frase.setAttribute("id","finfrase");
+					fin_frase.appendChild(texto);
+					padre.appendChild(fin_frase);
+				}
+				else {
+					if (num_a.length === 2){
+						var fin_frase = document.getElementById("finfrase");
+						padre.removeChild(fin_frase);
+					}
+				}				
+			}
+		}
+	</script>
+</head>
+<body>
+	<label id="iniciofrase"> en un lugar de la mancha ... <a></br>
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body{
+	background-color: ghostwhite;
+	width: 100%;
+	display: inline-block;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+header,nav,section,article,table,aside,footer{
+	border: 1px solid darkorange;
+}
+img{
+	width: 30%;
+}
+li{
+	list-style-position: inside;
+}
+header,nav,table {
+	width: 100%;
+	text-align: center;
+}
+
+section {
+	width: 35%;
+	float: right;
+	text-align: center;
+}
+
+article {
+	width: 33.333%;
+	float: left;
+	text-align: center;
+}
+
+aside {
+	width: 30%;
+	float: left;
+	text-align: center;
+}
+
+footer{
+	clear: both;
+	text-align: center;
+}
+
+#oro{
+	background: gold;
+}
+
+tr:nth-child(2n){
+	background: lightpink;
+}
+
+/* tablet 900-1200px */
+@media screen and (min-width: 900px) and (max-width: 1200px){
+	body {
+		background: lightgreen;
+	}
+	section{
+		width: 50%;
+		float: left;
+	}
+	aside{
+		width: 100%;
+	}
+}
+/* movil grande 600-900px*/
+@media screen and (min-width: 600px) and (max-width: 900px){
+	body {
+		background: lightblue;
+	}
+	section{
+		width: 50%;
+		float: left;
+	}
+	aside{
+		width: 100%;
+	}
+	section > article:nth-child(2), :nth-child(3){
+		width: 50%;
+	}
+	article:last-child{
+		width: 100%;
+	}
+}
+/* movil pequeña hasta 600px*/
+@media screen and (max-width: 600px){
+	body{
+		background: moccasin;
+	}
+	section,article,aside{
+		width: 100%;
+	}
+
+
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=5.0"> 
+	<title>Document</title>
+	<style>
+		input:invalid {
+			border: 1px solid red;
+		}
+	</style>
+	<script src="js/9-EjercicioValidarFormulario.js"></script>
+</head>
+<body>
+	<form action="#">
+		<fieldset>
+			<legend>Datos obligatorios</legend>
+			<label>Nombre</label><br>
+			<input type="text" pattern="^[a-zA-Z].*" required>
+			<br>
+			<label>Contraseña</label><br>
+			<input id="pass" type="password" pattern=".{8}.*" required>
+			<br>
+			<label>Edad</label><br>
+			<input type="number" min="0" max="110" required>
+			<br>
+			<label>Fecha Nacimiento</label><br>
+			<input type="date"required>
+			<br>
+			<label>Email</label><br>
+			<input type="email" required>
+			<br>
+			<label>Sexo</label><br>
+			<input type="radio" name="sexo" value="hombre">Hombre
+			<input type="radio" name="sexo" value="mujer" checked>Mujer
+			<br>
+		</fieldset>
+		<fieldset>
+			<legend>Datos opcionales</legend>
+			<label>Teléfono fijo</label><br>
+			<input type="text" pattern="^[89]\d{8}">
+			<br>
+			<label>Teléfono móvil</label><br>
+			<input type="text" pattern="^[67]\d{8}">
+			<br>
+			<label>Comentario</label><br>
+			<textarea col="10" row="15" placeholder="deja tú comentario"></textarea>
+		</fieldset>
+		<input id="e" type="submit" value="enviar">
+		<input type="reset" value="limpiar">
+		
+	</form>
+</body>
+</html>

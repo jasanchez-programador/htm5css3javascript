@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			var inicio = document.getElementById("iniciofrase");
+			document.getElementById("iniciofrase").onclick = function(){
+				var num = document.getElementsByTagName("label");
+				if (num.length === 1){
+					var texto = document.createTextNode("de cuyo nombre no quiero acordarme");
+					var fin = document.createElement("label");
+					fin.appendChild(texto);
+					inicio.appendChild(fin);
+				}
+				else{
+					var fin = num[1];
+					fin.parentNode.removeChild(fin);
+				}
+			};
+		}
+	</script>
+</head>
+<body>
+	<label id="iniciofrase"> en un lugar de la mancha ...</label>
+</body>
+</html>

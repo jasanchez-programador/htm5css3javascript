@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Efectos y animaciones jquery</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	
+	<script type="text/javascript">
+$(document).ready(function(){
+	var mostrado = true;
+	jQuery.fx.speeds = {
+		'slow': 850,
+		'high': 200,
+		'_default': 400
+	}
+
+	$('#normal').on('click',function(){
+		if (mostrado){
+			$('p').hide();
+			mostrado = false;
+		}
+		else{
+			$('p').show();
+			mostrado = true;	
+		}
+	})
+	$('#rapido').on('click',function(){
+		if (mostrado){
+			$('p').hide('high');
+			mostrado = false;
+		}
+		else{
+			$('p').show('high');
+			mostrado = true;	
+		}
+	})
+	$('#lento').on('click',function(){
+		if (mostrado){
+			$('p').hide('slow');
+			mostrado = false;
+		}
+		else{
+			$('p').show('slow');
+			mostrado = true;	
+		}
+	})
+	$('#fade').on('click',function(){
+		if (mostrado){
+			$('p').fadeOut();
+			mostrado = false;
+		}
+		else{
+			$('p').fadeIn();
+			mostrado = true;	
+		}
+	})
+	$('#slide').on('click',function(){
+		if (mostrado){
+			$('p').slideDown();
+			mostrado = false;
+		}
+		else{
+			$('p').slideUp();
+			mostrado = true;	
+		}
+	})
+
+		
+})
+	</script>
+</head>
+
+<body>
+	<input id="normal" type="button" value="normal">
+	<input type="button" value="rapido" id="rapido">
+	<input type="button" value="lento" id="lento">
+	<input type="button" value="fade" id="fade">
+	<input type="button" value="slide" id="slide">
+	<p> estoy para que me animen </p>
+	<p> estoy para que me animen </p>
+</body>
+</html>

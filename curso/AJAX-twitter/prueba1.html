@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>prueba twitter</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/ejercicioBootstrap/css/34-Ejercicio_Completo_Bootstrap.css">
+    <script type="text/javascript">
+ 		$(document).ready(function(){
+ 			$('input').on('click',function(){
+ 				$.get('https://twitter.com/i/search/timeline?f=realtime&q=Babylon%205&src=typd&include_available_features=1&include_entities=1&last_note_ts=85&max_position=TWEET-553069642609344512-553159310448918528-BD1UO2FFu9QAAAAAAAAETAAAAAcAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+ 					function(datos) {
+ 						console.log("recibidos: " + datos);
+            			var tweets = $('div');
+            			tweets.html('');
+            		}
+            	,'json')	
+            	}).error(function(){
+            		console.log("error: " + datos);
+            	})
+
+ 			})
+    </script>
+
+</head>
+<body>
+	<input type="button" value="twitter">
+	<br>
+	<div></div>
+</body>
+</html>

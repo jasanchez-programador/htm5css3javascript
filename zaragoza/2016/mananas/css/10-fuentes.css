@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Mystery+Quest);
+
+#titulo1{
+	font-size: 2em;
+  	font-family: 'Mystery Quest';
+}
+@font-face {
+  font-family: 'MysteryQuest';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fuentes/Mystery/mystery.woff2') format('woff2');
+}
+
+#titulo4{
+	font-size: 2em;
+	font-family: 'MysteryQuest';
+}

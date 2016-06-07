@@ -1,0 +1,27 @@
+<html lang="es">
+<head>
+	<title>quijote</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			var ps = document.getElementsByTagName('p');
+
+			ps[0].onclick = function(){
+				if (ps.length === 1){
+					var p_completar = document.createElement('p');
+					p_completar.innerHTML = "De cuyo nombre no quiero acordarme";
+					ps[0].parentNode.appendChild(p_completar);
+				}
+				else {
+					ps[0].parentNode.removeChild(ps[1]);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p>En un lugar de la mancha ...</p>
+	</div>
+</body>
+</html>	

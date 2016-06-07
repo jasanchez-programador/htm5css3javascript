@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Geolocalizacion con GoogleMaps</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascript/37-geoLocMapa_1.js"></script>
+	<style>
+		#crearmapa{
+			float: left;
+			padding: 5px;
+		}
+		#borrarmapa{
+			float: left;
+			padding: 5px;
+		}
+		#pintarmapa {
+			display: block;
+			padding: 5px;
+			clear: both;
+		}
+	</style>	 
+</head>
+<body>
+	<br>
+	<div class="row">
+		<section class="btn-group col-md-offset-3">
+			<button id="crear" class="btn btn-info">Obtener Localizacion</button>
+			<button id="borrar" class="btn btn-info">Quitar Mapa</button>
+		</section>
+	</div>
+	<br>
+	<div class="row">
+		<section id="mapa" class="col-md-offset-3">
+		</section>
+	</div>
+</body>
+</html>

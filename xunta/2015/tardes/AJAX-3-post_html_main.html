@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX load</title>		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input#boton').on('click', function(){
+				//repuesta en html 
+				// que recive como parametro la funcion en cod_html
+				// que reemplaza al html del div con id stage
+				// $('div#stage').load('http://localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso_tarde_xunta/AJAXRepuestaServidor.html',function(cod_html){
+				// 	console.log("recibo: " + cod_html);
+				// 	$('div#stage').html(cod_html);
+				// },'html');
+				$.post('http://localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso_tarde_xunta/AJAXRepuestaServidor.html',{'usuario':'julio'});
+			})
+		});
+	</script>
+
+</head>
+<body>
+	<p> Haz click en boton para Enviar datos al servidor</p>
+	<div id="stage" style="background:lightgreen">
+		STAGE
+	</div>
+	<br>
+	<input type="button" id="boton" value="boton">
+</body>
+</html>

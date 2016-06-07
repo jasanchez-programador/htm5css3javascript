@@ -1,0 +1,35 @@
+* {
+	margin:5%;
+}
+p{
+	font-size: 1.5em;
+}
+
+img:hover{
+	animation-name: saltar;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: 5;
+}
+
+p:hover{
+	animation-name: colorines;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: 3;
+}
+
+@keyframes saltar{
+	0%{transform: translateY(0);}
+	50%{transform: translateY(-30%)}
+	100%{transform: translateY(0%)}
+}
+
+@keyframes colorines{
+	0%{color: red;}
+	25%{color: gold;}
+	50%{color: green;}
+	75%{color: orange;}
+	100%{color: red;}
+	
+}

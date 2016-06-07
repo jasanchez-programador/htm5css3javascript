@@ -1,0 +1,43 @@
+* {
+	margin:0;
+	padding:0;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+header {
+	text-align: center;
+	width: 100%;
+}
+
+nav{
+	width: 100%;
+}
+
+ul#h{
+	width: 75%;
+	position: relative;
+	left: 50%;
+}
+
+
+ul#h > li.cabecera{
+	text-align: center;
+	list-style-type: none;
+	border: 1px solid black;
+	border-radius: 10px;
+	background: darkorange;
+	display: inline-block;
+	width: 25%;
+	position: relative;
+	right: 50%;
+	float: left;
+}
+
+li.submenu{
+	list-style-type: none;
+	border: 1px solid black;
+	opacity: 0.5;
+
+}

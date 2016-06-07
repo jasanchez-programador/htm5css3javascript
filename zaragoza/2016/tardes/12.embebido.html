@@ -1,0 +1,22 @@
+<html lang="es">
+<head>
+	<title>js en linea</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function inicial(){
+			document.getElementsByTagName('input')[0].onclick = function () {
+				var mip = document.createElement('p');
+				var texto = document.createTextNode('Hola mundo');
+				mip.appendChild(texto);
+				document.getElementsByTagName('input')[0].parentNode.appendChild(mip);
+			}
+		};
+		window.onload=inicial;
+	</script>
+</head>
+<body>
+	<div>
+		<input type="button" value="saludar">
+	</div>
+</body>
+</html>	

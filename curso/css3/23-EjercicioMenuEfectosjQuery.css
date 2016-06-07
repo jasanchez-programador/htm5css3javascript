@@ -1,0 +1,48 @@
+* {
+	margin:0;
+	padding:0;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+header {
+	text-align: center;
+	width: 100%;
+}
+
+nav{
+	width: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+ul#h{
+	width: 100%;
+    border-radius: 10px;
+   	display: inline-block;
+}
+
+
+li.cabecera{
+	width: 25%;
+	font-size: 1.1em;
+	float: left;
+	/* texto centrado */
+	text-align: center;
+	/* perdemos el icono/letra que esta a su izq */
+	list-style-type: none;
+	/* ponemos un borde negro */
+	border: 1px solid black;
+	/* color de fondo */
+	background-color: DarkOrange;
+	
+	border-radius: 5px;
+
+}
+
+li.submenu{
+	list-style-type: none;
+	border: 1px solid black;
+	/*opacity: 0.5;*/
+}

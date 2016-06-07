@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla Bootstrap</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/34-Ejercicio_Completo_Bootstrap.css">
+    <script type="text/javascript" src="js/34-Ejercicio_Completo_Bootstrap.js"></script>
+  </head>
+  <body>
+    <header class="text-center label-warning panel-danger">
+        <br>
+        <h1 id="h"><p>Mi empresa S.A, parte del IBEX35</p></h1>
+        <br>
+      </header>
+    <div class="container">
+      <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <nav class="navbar navbar-default label-warning panel-danger">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><p class="text-danger">Mi Empresa</p></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="34-Ejercicio_Completo_Bootstrap.html"><p class="text-danger">Inicio<span class="sr-only">(current)</span></p></a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><p class="text-danger">Acciones<span class="caret"></span></p></a>
+                  <ul class="dropdown-menu label-warning panel-danger">
+                    <li><a href="34-Ejercicio_Completo_Bootstrap_formulario.html"><p class="text-danger">Formulario</p></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="34-Ejercicio_Completo_Bootstrap_calculadora.html"><p class="text-danger">Calculadora</p></a></li>
+                  </ul>
+                </li>
+                <!-- -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><p class="text-danger">Completar <span class="caret"></span></p></a>
+                  <ul class="dropdown-menu label-warning panel-danger">
+                    <li><a href="#"><p class="text-danger">Frases</p></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+      </div>
+      <div class="row">
+        <br>
+      </div>
+      <div class="row">
+        <section>
+        <div id="a" class="btn btn-group col-sm-5 col-sm-offset-3">
+          <button class="num btn btn-warning btn-lg" id="nueve" value="9">9</button>
+          <button class="num btn btn-warning btn-lg" id="ocho" value="8">8</button>
+          <button class="num btn btn-warning btn-lg" id="siete" value="7">7</button>
+          <button class="operacion btn btn-warning btn-lg" id="suma" value="+">+</button>
+        </div>
+        <br>
+        <div id="b" class="btn btn-group col-sm-5 col-sm-offset-3">
+          <button class="num btn btn-warning btn-lg" id="seis" value="6">6</button>
+          <button class="num btn btn-warning btn-lg" id="cinco" value="5">5</button>
+          <button class="num btn btn-warning btn-lg" id="cuatro" value="4">4</button>
+          <button class="operacion btn btn-warning btn-lg" id="resta" value="-">-</button>
+        </div>
+        <br>
+        <div id="c" class="btn btn-group col-sm-5 col-sm-offset-3">
+          <button class="num btn btn-warning btn-lg" id="tres" value="3">3</button>
+          <button class="num btn btn-warning btn-lg" id="dos" value="2">2</button>
+          <button class="num btn btn-warning btn-lg" id="uno" value="1">1</button>
+          <button class="operacion btn btn-warning btn-lg" id="mult" value="*">*</button>
+        </div>
+      </section>
+      <section>
+        <div id="d" class="btn btn-group col-sm-5 col-sm-offset-3">
+          <button class="num btn btn-warning btn-lg" id="punto" value=".">.</button>
+          <button class="num btn btn-warning btn-lg" id="0" value="0">0</button>
+          <button class="igual btn btn-warning btn-lg" id="igual" value="=">=</button>
+          <button class="operacion btn btn-warning btn-lg" id="div" value="/">/</button>
+        </div>
+      </section>
+      </div>
+      <div class="row">
+        <div class="input-group col-sm-5 col-sm-offset-2">
+          <span class="input-group-addon">
+            <button class="borrartodo btn btn-default">
+              <span class="glyphicon glyphicon-erase"></span>
+            </button>
+          </span>
+          <input id="resultado" type="text" class="form-control input-lg" value="">
+          <span class="input-group-addon borrartodo">
+            <button class="borraruno btn btn-default">
+            C
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+      </div>
+      <div class="row">
+        <div>
+          <footer class="text-center label-warning panel-danger text-danger">
+            <br>
+            <h4><p>Me empresa está salvando el mundo</p>
+            <h4><p>La mejor calle del mundo, n&uacute;mero 1, Bajo B</p></h4>
+            <h4><p>Informaci&oacute;n 933 429 436</p></h4>
+            <br>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

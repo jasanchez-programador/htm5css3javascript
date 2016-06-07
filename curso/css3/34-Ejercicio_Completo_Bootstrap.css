@@ -1,0 +1,24 @@
+div#b, div#a, div#c{
+    height: 50%;
+}
+button{
+    width: 46px;
+    height: 46px;
+}
+input#resultado{
+        height: 60px; 
+      }
+div.row, form{
+	background: #FBF4EA;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+input:valid {
+	border: 1px solid blue;
+}
+
+button{
+	color: black !important;
+}

@@ -1,0 +1,147 @@
+body{
+	text-align: center;
+	width: 40%;
+}
+section{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 2%;
+	width: 30%;
+}
+#principal1{
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid black;
+	background: #DDDDDD;
+}
+#principal2{
+	text-align: center;
+	background: #DDDDDD;
+}
+#principal3{
+	text-align: center;
+	background: #AAAAAA;
+}
+
+#principal1{
+	border-radius: 25px;
+}
+#principal2{
+	border-radius: 40% / 25%;
+}
+#principal1{
+	box-shadow: black 3px 5px 10px;
+}
+#principal2{
+	box-shadow: rgba(80,80,80,0.9) -3px -5px 10px inset;
+}
+#principal3{
+	color: hsla(220, 75%, 90%, 0.7);
+}
+#principal1{
+	text-shadow: rgba(90,90,90,0.9) 3px 5px 10px; 
+}
+#principal2{
+	text-shadow: rgba(100,100,100,0.9) -3px -5px 10px;
+}
+#principal1{
+	background: -webkit-linear-gradient(top left,DarkRed ,DarkOrange );
+}
+
+#principal2{
+	 background: -webkit-radial-gradient(center,ellipse,White 7%,DarkOrange 50%);
+}
+#principal3{
+	border: 10px solid transparent;
+	border-image: url("../fotos/iconos/flower.gif") 25% round;
+}
+#principal3{
+	outline: 2px dashed DarkBlue;
+	outline-offset: 1px;
+}
+#principal3{
+	-webkit-transform: scale(-0.9,-1.2) rotate(10deg) skew(-10deg) translate(-7px,5px);
+}
+/*#principal3{
+	/*
+	transformar con scala el ancho y el alto:
+		entre 0 y 1 para mas pequeño;
+		mas de 1 para mas grande;
+	con valores negativos invierte
+	*/
+/*	-webkit-transform: scale(-0.9,-0.5);
+	/*
+	transformar con rotate inclinamos hacia las agujas del reloj
+	con valores negativos al contrario de las agujas del reloj
+	*/
+/*	-webkit-transform: rotate(10deg);
+	/*
+	transformar con skew cambiamos la diferencia entre la parte superior y la inferior
+	con valores negativos la parte de abajo mas a la derecha
+	*/
+/*	-webkit-transform: skew(-10deg);
+	/*
+	transformar con transalte movemos, en PIXELES, a derecha y abajo 
+	con valores negativos a izq. y arriba
+	*/
+/*	-webkit-transform: translate(-7px,5px);
+	
+	/* Para hacer multiples transformaciones aplicarlas en la misma linea */
+/*	-webkit-transform: scale(-0.9,-0.5) rotate(10deg) skew(-10deg) translate(-7px,5px);
+
+    
+}*/
+#principal4{
+	background-color: #900;
+	
+}
+#principal4:hover{
+	/*
+	Para especificar diferente configuracion de transicion para diferentes propiedades:
+	SOLO TRANSITION CON LAS PROIEDADES SEPARADAS POR ,
+	-webkit-transition: backgroud-color 10s 1s ease-in-out, -webkit-transform 10s 1s ease-in-out
+	*/
+	-webkit-transition-property: background-color, -webkit-transform;
+	-webkit-transition-duration: 10s;
+	-webkit-transition-delay: 1s;
+	-webkit-transition-timing-function: ease-in-out;
+	background-color: #090;
+	-webkit-transform: scale(-0.9,-0.5) rotate(10deg) skew(-10deg) translate(-7px,5px);
+}
+#principal4:active{
+	-webkit-transform: scale(-0.9,-0.5) rotate(10deg) skew(-10deg) translate(-7px,5px);
+}
+
+/*@font-face { /* Copiar/Pegar del fichero stylesheet.css que nos genera www.fontsquirrel.com */
+/*    font-family: 'droid_sansregular';
+   	src: url('../fuentes/GOOGLE_ANDROID//droidsans-webfont.eot');
+   	src: url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.woff2') format('woff2'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.woff') format('woff'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.ttf') format('truetype'),
+       	 url('../fuentes/GOOGLE_ANDROID/droidsans-webfont.svg#droid_sansregular') format('svg');
+   	font-weight: normal;
+   	font-style: normal;
+}
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.eot');
+    src: url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.woff') format('woff'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.ttf') format('truetype'),
+         url('../fuentes/IMPALLARI/kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+span#titulo1{
+	font: bold 36px "kaushan_scriptregular";
+}
+span[id^="titulo"]{
+	font: bold 20px "droid_sansregular";
+}
+*/

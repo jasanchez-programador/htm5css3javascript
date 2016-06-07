@@ -1,0 +1,96 @@
+
+.bounce{
+	margin: 50px;
+	padding-left: 5%;
+}
+
+.bounce:hover{
+	animation-name: bounce;
+	-webkit-animation-name: bounce;	
+
+	animation-duration: 1.6s;	
+	-webkit-animation-duration: 1.6s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-webkit-transform-origin: 50% 100%; 	
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0%) scaleY(0.6);
+	}
+	60%{
+		transform: translateY(-50%) scaleY(1.1);
+	}
+	70%{
+		transform: translateY(0%) scaleY(0.95);
+	}
+	80%{
+		transform: translateY(-20%) scaleY(1.05);
+	}	
+	90%{
+		transform: translateY(0%) scaleY(0.95);
+	}				
+	100%{
+		transform: translateY(0%) scaleY(1);
+	}	
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: translateY(0%) scaleY(0.6);
+	}
+	60%{
+		-webkit-transform: translateY(-50%) scaleY(1.1);
+	}
+	70%{
+		-webkit-transform: translateY(0%) scaleY(0.95);
+	}
+	80%{
+		-webkit-transform: translateY(-20%) scaleY(1.05);
+	}	
+	90%{
+		-webkit-transform: translateY(0%) scaleY(0.95);
+	}				
+	100%{
+		-webkit-transform: translateY(0%) scaleY(1);
+	}	
+}
+
+p {
+	text-align: center;
+	width: 25%;
+}
+p:hover{
+	animation-name: cc;
+	-webkit-animation-name: cc;	
+
+	animation-duration: 1.6s;	
+	-webkit-animation-duration: 1.6s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+}
+
+@keyframes cc {
+	0% {
+		color: red;
+	}
+	25%{
+		color: gold;
+	}
+	50%{
+		color: red;
+	}
+	75%{
+		color: gold;
+	}	
+	100%{
+		color: black;
+	}	
+}

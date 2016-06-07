@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+	<title>
+		Ejemplo de HTML5 con JavaScript EMBEBIDO 
+	</title>
+	<script type="text/javascript">
+		function inicio(){
+			var boton = document.getElementsByTagName("input");
+			boton[0].onclick=function(){
+				var miP = document.createElement("p");
+				var textoP = document.createTextNode("hola Mundo!!");
+				miP.appendChild(textoP);
+				boton[0].parentNode.appendChild(miP);
+			};
+		}
+		window.onload=inicio;
+	</script>
+  </head>
+  <body>
+	<div id="principal">
+		<input type="button" value="saludar">
+	</div>
+  </body>
+</html>

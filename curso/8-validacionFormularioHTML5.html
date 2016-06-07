@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		<title>8-validar formulario</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			body{
+				width: 100%;
+				padding-right: 10%;
+				padding-left: 10%;
+			}
+			form{
+				width:65%;
+				padding-left: 30%;
+			}
+			input:invalid{
+				border: 1px solid red;
+			}
+
+		</style>
+	</head>
+	<body>
+		<form action="#datos_enviados.html" method="post">
+			<fieldset>
+				<legend>Nuevos en HTML5</legend>
+				<label id="tel">Telefono Fijo </label><br/>
+				<input type='tel' pattern="^[89]\d{8}$" required>
+				<br/><br/>
+				<label id="url">URL personal</label><br/>
+				<input type="url" placeholder="tu url personal" required="required"><br/>
+				<br/>
+				<label id="search">Busqueda en google</label><br/>
+				<input type="search" name="buscar en google"><br/>
+				<br/>
+				<label id="email">Email</label> <br/>
+				<input type="email" value="Email">
+				<br/><br/>
+				<label id="number">Edad</label>
+				<input type="number" min="0" max="110"> 
+				<br/><br/>
+				<label id="range">Puntiacion</label>
+				<input type="range" min="0" max="10"> 
+				<br/><br/>
+				<label id="color">color</label>
+				<input type="color" min="0" max="10"> 
+				<br/><br/>
+				<label id="date">Fecha de Nacimiento</label>
+				<input type="date"> 
+				<br/><br/>
+				<label id="time">Hora de Nacimiento</label>
+				<input type="time"> 
+				<br/><br/>
+			</fieldset>
+			<br/>
+			<input type="submit" value="submit">
+			<input type="reset" value="limpiar datos">
+		</form>
+	</body>
+</html>

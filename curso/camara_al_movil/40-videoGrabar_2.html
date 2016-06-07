@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla Bootstrap</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/40-videoGrabar_2.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+			     <br>	
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+  			   <video id="camara" controls="controls" width="400" height="250" autoplay></video>
+        </div>
+        <div class="col-md-5">
+            <canvas style="border: 1px solid black" id="canvas" width="400" height="250"></canvas>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="col-md-8">
+          <div class="btn-group">
+            <button id="inicio" class="btn btn-warning">Grabar</button>
+            <button id="fin" class="btn btn-primary">Parar</button>
+            <button id="foto" class="btn btn-info">Foto</button>
+         	</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  
+</html>

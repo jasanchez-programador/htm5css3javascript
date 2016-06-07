@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Plantilla bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style type="text/css">
+		div[class^=col],p,input{
+			border: 1px solid darkorange;
+		}
+		li.rojo{
+			background: darkRed;
+		}
+
+		a.dropdown-toggle.rojo:hover{
+			background-color: darkOrange;
+			/*background-image: none;*/
+		}
+	</style>
+
+</head>
+<body>
+	<br>
+	<div class="row">
+		<ul class="col-md-offset-4 col-md-3 nav nav-tabs">
+			<li class="dropdown rojo">
+	    		<a class="dropdown-toggle rojo" data-toggle="dropdown" href="#">
+	      		Dropdown <span class="caret"></span>
+	    		</a>
+	    		<ul class="dropdown-menu">
+	      			<li><a href="">submenu1</a></li>
+	      			<li><a href="">submenu2</a></li>
+	      			<li><a href="">submenu3</a></li>
+	    		</ul>
+	 	 	</li>
+	 	 	<li class="dropdown rojo">
+	    		<a class="dropdown-toggle rojo" data-toggle="dropdown" href="#">
+	      		Dropdown2 <span class="caret"></span>
+	    		</a>
+	    		<ul class="dropdown-menu">
+	      			<li><a href="">submenu3</a></li>
+	      			<li><a href="">submenu4</a></li>
+	      			<li><a href="">submenu5</a></li>
+	    		</ul>
+	 	 	</li>
+		</ul>
+	</div>
+</body>
+</html>

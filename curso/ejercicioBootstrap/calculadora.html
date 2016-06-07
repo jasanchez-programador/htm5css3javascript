@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla Bootstrap</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/ejercicioBootstrap/css/34-Ejercicio_Completo_Bootstrap.css">
+    <script type="text/javascript" src="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/ejercicioBootstrap/js/34-Ejercicio_Completo_Bootstrap.js"></script>
+
+  </head>
+  <body>
+    <!-- <link rel="import" href="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/ejercicioBootstrap/cabecera.html"> -->
+      <section>
+    <div class="container">
+      <br>
+      <div class="row cabecera">
+
+      </div>
+      <br>
+        <div class="row col-xs-offset-3 col-sm-offset-3 col-md-offset-3 
+                    col-xs-4 col-sm-4 col-md-4
+                    " style="background: grey;">
+          <div class="row" class="row">
+            <input id="resultado" type="text" class="form-control" value="" disabled>
+          </div>
+          <br>
+          <div id="result" class="row col-xs-offset-3 col-sm-offset-3 col-md-offset-3">      
+              <button class="borrartodo btn btn-danger btn-lg">
+                <span class="glyphicon glyphicon-erase"></span>
+              </button>
+              <button class="borraruno btn btn-danger btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+              C
+              </button>
+          </div>
+          <br>
+          <div id="a" class="row col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+            <button class="num btn btn-warning" id="nueve" value="9">9</button>
+            <button class="num btn btn-warning" id="ocho" value="8">8</button>
+            <button class="num btn btn-warning" id="siete" value="7">7</button>
+            <button class="operacion btn btn-warning btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1" id="suma" value="+">+</button>
+          </div>
+          <br>
+          <div id="b" class="row col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+            <button class="num btn btn-warning" id="seis" value="6">6</button>
+            <button class="num btn btn-warning" id="cinco" value="5">5</button>
+            <button class="num btn btn-warning" id="cuatro" value="4">4</button>
+            <button class="operacion btn btn-warning btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1" id="resta" value="-">-</button>
+          </div>
+          <br>
+          <div id="c" class="row col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+            <button class="num btn btn-warning" id="tres" value="3">3</button>
+            <button class="num btn btn-warning" id="dos" value="2">2</button>
+            <button class="num btn btn-warning" id="uno" value="1">1</button>
+            <button class="operacion btn btn-warning btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1" id="mult" value="*">*</button>
+          </div>
+          <br>
+          <div id="d" class="row col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+            <button class="num btn btn-warning" id="punto" value=".">.</button>
+            <button class="num btn btn-warning" id="0" value="0">0</button>
+            <button class="igual btn btn-warning" id="igual" value="=">=</button>
+            <button class="operacion btn btn-warning btn-lg col-xs-offset-1 col-sm-offset-1 col-md-offset-1" id="div" value="/">/</button>
+          </div>
+          <br>
+      </div>
+      </section>
+      <div class="row">
+        <br>
+      </div>
+     </div> <!-- cerrar container -->
+      <div class="row">
+        <div>
+          <footer class="text-center label-warning panel-danger text-danger">
+            <br>
+            <h4><p>Me empresa está salvando el mundo</p>
+            <h4><p>La mejor calle del mundo, n&uacute;mero 1, Bajo B</p></h4>
+            <h4><p>Informaci&oacute;n 933 429 436</p></h4>
+            <br>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

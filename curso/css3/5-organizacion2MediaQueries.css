@@ -1,0 +1,183 @@
+/* Selector global. todos los marcadores */
+* { 
+	margin: 0%;
+	padding: 0%;
+	/* padding y border se aplicara dentro de las medidas 
+	width y height
+	asi dos elementos con mismo ancho y alto pero diferentes
+	separaciones seran del mismo tamaño
+	 */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/* -o  -->  opera
+	   -ms -->  ie */
+}
+
+/* borde para identificar elementos */
+header,nav,section,article,aside,footer,table,tr {
+	border: 1px solid DarkOrange;
+}
+ 
+/* Que su informacion este centrada en la pantalla */
+header,nav,footer{
+	text-align: center;
+}
+/* como situo a los elementos de la lista */
+li {
+	text-align: inherit;
+	/*display: inline-block; /* unos al lado de otros, sobreescribe los siguentes */
+	list-style: square; /* delante un cuadrado */
+	list-style-position: inside; /* sino se dibuja fuera del border */
+}
+
+/* colocacion adaptativa */
+body {
+	/* distribucion en cajas
+	body ocupa el 100% del dispositivo 
+	*/
+	padding-left: 10%;
+	padding-right: 10%;
+	background: GhostWhite;
+	display: inline-block;
+	width: 100%;
+}
+header,nav,table{
+	/* 	ocupan el 100% del dispositivo, una debajo de otra */
+	width: 100%;
+}
+/* 	entre la seccion y el aside me aseguro que no superen el 100%
+	en la estructura de cajas la seccion a la izquierda y el aside a la derecha	
+*/
+section,aside {
+	width: 33.3%;
+	float: left;
+	/* Por si alguien dice que el borde de aside no llega al final */
+	/*height: 127px;*/
+	
+}
+
+section > article {
+/*	hay 3 articulos dentro de la seccion
+	su ancho esta limitado al section
+	entre los 3 me aseguro que no superen el 100% del section
+	se van colocando en orden hacia la izq. */
+	width: 33.3%;
+	float: left;
+}
+
+/* que las filas impares tengan fondo rojo */
+tr:nth-child(2n){
+	background-color: moccasin;
+}
+
+ footer{
+/* evitar que el footer suba y descoloque la composicion de cajas*/
+	clear: both;
+}
+
+:visited{
+	color: Green;
+}
+/* que los parrafos con clase h hijos de h3 de las 2 sections esten centrados */
+.h {
+	text-align: center;
+}
+
+/* que el parrafo con id oro del footer tenga fondo oro */
+#oro{
+	background-color: gold;
+}
+
+/* solo al pintar en pantalla, no al imprimir*/
+/* para tablets */
+/*
+Lo que voy a cambiar es:
+color de fondo
+recolocar los sections,aside y articles
+
+
+section1(50%) || section2(50%) 
+aside(100%)
+       
+article1(33) || article2(33) || article3(33)                           
+*/
+@media screen and (min-width: 900px) and (max-width: 1200px) { 
+	body {
+		background: lightgreen;
+	}
+	section,aside{
+		width: 50%;
+		float: left;
+		/* Por si alguien dice que el borde de aside no llega al final */
+		/*height: 127px;*/
+		
+	}
+	aside{
+		width: 100%;
+		float: left;
+		text-align: center;
+	}
+}
+
+/*
+Para moviles grandes
+section1(50) || section2(50) || 
+aside(100)
+       
+article1(50%) || article2(50%) ||
+article3(100%)                           
+*/
+@media screen and (min-width: 600px) and (max-width: 900px) { 
+	body {
+		background: darkkhaki;
+	}
+	section{
+		width: 50%;
+		float: left;
+		/* Por si alguien dice que el borde de aside no llega al final */
+		/*height: 127px;*/
+		
+	}
+	aside{
+		width: 100%;
+		float: left;
+		text-align: center;
+	}
+	section > article:nth-child(2),article:nth-child(3){
+	/*	hay 3 articulos dentro de la seccion
+		su ancho esta limitado al section
+		entre los 3 me aseguro que no superen el 100% del section
+		se van colocando en orden hacia la izq. */
+		width: 50% !important;
+		float: left;
+	}
+	section > article:nth-child(4){
+	/*	hay 3 articulos dentro de la seccion
+		su ancho esta limitado al section
+		entre los 3 me aseguro que no superen el 100% del section
+		se van colocando en orden hacia la izq. */
+		width: 100% !important;
+		float: left;
+		text-align: center;
+	}
+}
+/* para moviles pequeños 
+Todo uno debajo de otro
+*/
+@media screen and (max-width: 600px) { 
+	body{
+		background-color: lightpink;
+	}
+	li {
+		display: block; /* unos al lado de otros, sobreescribe los siguentes */
+	}
+	section,aside,article {
+		/* para que tenga prioridad respecto al section > article */
+		width: 100% !important;
+		display: block;
+		text-align: center;
+		
+	}
+}
+

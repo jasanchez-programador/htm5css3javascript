@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<meta name="viwport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css3/19-ejercicioValidacionFormulario.css">
+		<script src="javascript/19-ejercicioValidacionFormulario.js"></script>
+	</head>
+	<body>
+		<form action="#alservidor" method="get">
+			<fieldset>
+				<legend>Datos conexi&oacute;n</legend>
+				<label id="text">Nombre: </label><br>
+				<input type="text" pattern="^[a-zA-Z].*" maxlength='10' required='required' autofocus>	<br/><br/>
+				<label id="lpassword">Contrase&ntilde;a: </label><br>
+				<input id="pass" type="password" pattern=".{8}.*" required='required'><br/><br/>
+			</fieldset>
+			<fieldset>
+				<legend>Datos personales</legend>
+				<label id="number">Edad: </label><br>
+				<input type="number" min="0" max="110" required='required'>	<br/><br/>
+				<label id="date">Fecha de Nacimiento: </label><br>
+				<input type="date" required='required'>	<br/><br/>
+				<label id="email">Email: </label><br>
+				<input type="email" pattern=".*@curso.esp$" required='required'> <br/><br/>
+				<label id="radio">Sexo: </label><br>
+				<input type="radio" value="hombre"><label>hombre</label><br>
+				<input type="radio" value="mujer" checked="checked"><label>mujer</label><br><br/>
+				<label id="telfijo">Tel&eacute;fono fijo: </label>
+				<input type="tel" pattern="^[89]\d{8}$" required='required'><br/>
+				<label id="telmovil">Tel&eacute;fono movil: </label>
+				<input type="tel" pattern="^[67]\d{8}$" required><br/><br/>
+				<label id="textarea">Comentarios: </label><br>
+				<textarea col="20" rows="3"></textarea>	<br/><br/>				
+			</fieldset>
+			<input type="submit" id="enviar" value="Enviar">
+			<input type="reset" id="limpiar" value="limpiar formulario">
+		</form>
+	</body>
+</html>

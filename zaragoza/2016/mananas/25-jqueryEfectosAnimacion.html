@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>efectos y animaciones con jquery</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function(){
+	console.log("cargada");
+
+	jQuery.fx.speeds = {
+		slow: 800,
+		high: 150,
+		_default: 450
+	}
+
+	var seVe = true;
+
+	$('#normal').on('click',function(){
+		if ( seVe ){
+			$('p').hide();
+			seVe = false;
+		}
+		else{
+			$('p').show();
+			seVe = true;
+		}
+	})
+	$('#lento').on('click',function(){
+		if ( seVe ){
+			$('p').hide("slow");
+			seVe = false;
+		}
+		else{
+			$('p').show("slow");
+			seVe = true;
+		}
+	})
+	$('#rapido').on('click',function(){
+		if ( seVe ){
+			$('p').hide("high");
+			seVe = false;
+		}
+		else{
+			$('p').show("high");
+			seVe = true;
+		}
+	})
+
+});
+	</script>
+</head>
+<body>
+	<!-- show() hide() -->
+	<input type="button" value="normal" id="normal">
+	<!-- show() hide() speed slow-->
+	<input type="button" value="lento" id="lento">
+	<!-- show() hide() speed high-->
+	<input type="button" value="rapido" id="rapido">
+	<!-- slideUp() slideDown()-->
+	<input type="button" value="slide" id="slide">
+	<!-- fadeIn() fadeOut()-->
+	<input type="button" value="fade" id="fade">
+
+
+
+	<p> sobre mi los efectos </p>
+	<p> sobre mi los efectos </p>
+	<p> sobre mi los efectos </p>
+</body>
+</html>

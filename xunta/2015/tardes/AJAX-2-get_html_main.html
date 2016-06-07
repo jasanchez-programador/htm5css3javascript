@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX get</title>		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input#boton').on('click', function(){
+				//repuesta en html 
+				// que recive como parametro la funcion en cod_html
+				// que reemplaza al html del div con id stage
+				$.get('AJAXRepuestaServidor.html',function(cod_html){
+					$('div#stage').html(cod_html);
+				},'html');
+			})
+		});
+	</script>
+
+</head>
+<body>
+	<p> Haz click en boton para cargar la página con una peticion AJAX</p>
+	<div id="stage" style="background:lightgreen">
+		STAGE
+	</div>
+	<br>
+	<input type="button" id="boton" value="boton">
+</body>
+</html>

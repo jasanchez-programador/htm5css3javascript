@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX load</title>		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('p').on('click', function(){
+				//repuesta en html 
+				// recibo un array de objetos
+				$.getJSON('http://jsonplaceholder.typicode.com/posts',function(arr){
+					// sustituyo el div por una tabla
+					var contador = 1;
+					var cabecera = false;
+					$('div#stage').html($('<table>').css({"border-collapse":"collapse"}));
+
+					// solo las claves del primer jason para las cabeceras
+					$.each(arr[0],function(clave,valor){
+						$('table').append($('<th>').css({"border": "1px solid darkred"}).text(clave))
+					});
+					// recorrer todos los elementos del array
+					$.each(arr,function(pos,jason){
+						// recorrer cada json
+						// creando una fila en la tabla por cada elemento del array
+						var fila = $('<tr>').appendTo($('table'));
+						$.each(jason,function(clave,valor){
+							fila.append($('<td>').css({"border": "1px solid darkred"}).text(valor) )
+						})
+					})
+				});
+			})
+		});
+	</script>
+
+</head>
+<body>
+	<p> Haz click en boton para cargar la página con una peticion AJAX</p>
+	<div id="stage" style="background:lightgreen">
+		STAGE
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX load</title>		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input#boton').on('click', function(){
+				//$('div#stage').load('13-AJAXloadServidor.html');
+				$.getJSON('13-AJAXloadServidor.json',function(jason){
+					$('div#stage').html('<p>nombre: ' + jason.name + '</p>');
+					$('div#stage').append('<p>edad: ' + jason.age + '</p>');
+				});
+			})
+		});
+	</script>
+
+</head>
+<body>
+	<p> haz click en boton </p>
+	<div id="stage" style="background:lightgreen">
+		STAGE
+	</div>
+	<br>
+	<input type="button" id="boton" value="boton">
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+	text-align: center;
+}
+
+section{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 2%;
+	width: 30%;
+}
+
+#principal1{
+	display: block; 
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid black;
+	background: #DDDDDD;
+
+}
+
+#principal2{
+	text-align: center;
+	border: 1px solid black;
+	background: #DDDDDD;
+}
+
+#principal3{
+	text-align: center;
+	border: 1px solid black;
+	background: #AAAAAA;
+}
+
+#principal1{
+	border-radius: 15px;
+	box-shadow: rgba(80,80,80,0.7) 3px 5px 10px;
+	text-shadow: rgba(255,0,0,0.7) -3px -5px 10px;
+
+	background: repeating-linear-gradient(180deg,darkred 10%,darkorange 20%);
+}
+
+#principal2{
+	border-radius: 500px / 100px;
+	box-shadow: rgba(80,80,80,0.7) -3px -5px 10px inset;
+	text-shadow: rgba(0,0,255,0.7) 3px 5px 10px;
+}
+
+#principal3{
+	background: -webkit-radial-gradient(center,ellipse,white 10%, darkorange 40%, pink 50%);
+	border: 15px solid transparent;
+	border-image: url("../fotos/iconos/flower.gif") 40% round;	
+	transform: rotate(10deg) scale(0.4,2) translate(-100px,-15px) skew(-25deg);
+}
+
+#principal4{
+	background-color: #900;
+	transition: background-color 15s 0s ease-in, transform 5s 0s ease-in-out; 
+
+}
+
+#principal4:hover{
+	background-color: #090;
+/*	transition-duration: 10s;
+	transition-delay: 0.5s;
+	transition-timing-function: ease-in-out;
+	*/transform: rotate(10deg) scale(0.4,2) translate(-100px,-15px) skew(-25deg);
+}
+
+img{
+	margin: 100px;
+	width: 10%;
+}
+
+img:hover{
+	width: 20%;
+	animation-duration: 7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 2;
+	animation-name: borrachin;
+}
+
+@keyframes borrachin{
+	0%{transform: rotate(0deg) scaleY(0.5);}
+	20%{transform: rotate(-5deg) scaleY(1.5);}
+	40%{transform: rotate(5deg) scaleY(0.7);}
+	60%{transform: rotate(-2deg);}
+	80%{transform: rotate(2deg);}
+	100%{transform: rotate(0deg)}
+}

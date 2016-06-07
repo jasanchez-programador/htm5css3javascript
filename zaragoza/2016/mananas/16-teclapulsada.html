@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>tecla pulsada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">
+		window.onload = function(){
+			var si_ie = navigator.userAgent.toLowerCase().indexOf("msie");
+			document.onkeypress = function(e){
+				var evento = e || window.event;
+				if (si_ie < 0){
+				 	console.log(String.fromCharCode(evento.keyCode));
+				}
+				else {
+					console.log(String.fromCharCode(evento.charCode));
+				}
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<p>Mirar en consola la tecla pulsada</p>
+</body>
+</html>

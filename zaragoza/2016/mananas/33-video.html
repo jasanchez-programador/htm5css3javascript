@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>prueba video</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('button:first-child').on('click',function(){
+				var video = $('video')[0]
+
+				if ( video.requestFullScreen ){
+					console.log("implementada!!!")
+					video.requestFullScreen();
+				}
+				else if (video.webkitRequestFullScreen ){
+					console.log("webkit!!!")
+					video.webkitRequestFullScreen();
+				}
+				else if (video.mozRequestFullScreen ){
+					console.log("moz!!!")
+					video.mozRequestFullScreen();
+				}
+			})
+		});
+
+	</script>
+
+</head>
+<body>
+	<br>
+	<div class="container">
+		<div class="row">
+			<video controls poster="fotos/luna_de_colores.jpg" width="640">
+				<source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+				<!-- <source src=""> -->
+			</video>
+		</div>
+		<br>
+		<div class="row">
+			<button type="button" class="col-md-offset-3 btn btn-link"><span class="glyphicon glyphicon-fullscreen"></span></button>
+		</div>
+	</div>
+	
+</body>
+</html>

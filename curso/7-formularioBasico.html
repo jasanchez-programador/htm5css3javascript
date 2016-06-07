@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		<title>7-formulario básico</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	</head>
+	<body>
+		<form action="#servidor" method="get">
+			<fieldset>
+				<legend>Datos Conexion</legend>
+				<label id="text">nombre usuario</label> <br/>
+				<input type="text" value="">
+				<br/><br/>
+				<label id="password">contraseña</label><br/>
+				<input type="password" value="">
+				<br/><br/>
+			</fieldset>
+			<fieldset>
+				<legend>Datos Personales</legend>
+				<label id="checkbox">Gustos </label><br/>
+				<input type="checkbox" value="deporte"> deporte<br/>
+				<input type="checkbox" value="ciencia"> ciencia<br/>
+				<input type="checkbox" value="libros"> libros<br/>
+				<br/> 
+				<label id="radio">Sexo</label> <br/>
+				<input type="radio" name="sexo" value="hombre"> <label>hombre</label>
+				<br/>
+				<input type="radio" name="sexo" value="mujer" checked="checked"> <label>mujer</label>
+				<br/><br/>
+				<label id="select">Estudios </label><br/>
+				<select name="elige una opcion">
+				  <option value="Sin Estudios">Sin Estudios</option>
+				  <option value="Primarios">Primarios</option>
+				  <option value="Universitarios">Universitarios</option>
+				</select>
+				<br/><br/>
+				<label id="textarea">Comentarios </label><br/>
+				<textarea rows="10" cols="20" placeholder="Dejar comentarios"></textarea>
+				<br/><br/>
+				<label id="tel">Telefono </label><br/>
+				<input type='tel'>
+				<br/><br/>
+			</fieldset>
+			<br/>
+			<input type="submit" value="submit">
+			<input type="reset" value="limpiar datos">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla Bootstrap</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/javascript/38-webStorage.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <br>
+        <div class="row">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Introduce Clave</label>
+              <input type="text" class="form-control" id="clave" placeholder="Pon clave">
+            </div>
+            <div class="form-group">
+              <label>Introduce valor</label>
+              <input type="text" class="form-control" id="valor" placeholder="Pon valor">
+            </div>
+            <input type="button" id="guardar" class="btn btn-default" value="Guardar">
+          </form>
+        </div>    
+          <br>
+          <br>
+        <div class="row">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Clave a buscar</label>
+              <input type="text" class="form-control" id="claveBuscar">
+            </div>
+            <div class="form-group">
+              <label>Valor encontrado</label>
+              <input type="text" class="form-control" id="valorBuscar" disabled>
+            </div>
+            <input type="button" id="buscar" class="btn btn-default" value="Buscar">
+          </form>
+        </div>
+          <br>
+          <br>
+        <div class="row">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Clave a borrar</label>
+              <input type="text" class="form-control" id="claveBorrar">
+            </div>
+            <input type="button" id="borrar" class="btn btn-default" value="Borrar">
+          </form>
+        </div>
+    </div>
+  </body>
+</html>

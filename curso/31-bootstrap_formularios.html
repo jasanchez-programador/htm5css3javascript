@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla Bootstrap</title>
+    <!-- CSS de Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <!-- formulario donde cada elemento ocupa todo el ancho
+      se puede jugar con col-md-* en form para reducir su tamaño
+      NO LABEL AL LADO DEL INPUT -->
+      <div class="row">
+          <form class="form col-md-6 col-md-offset-3">
+            <div class="form-group">
+              <!-- colores en el label -->
+              <label class="label-success">Email</label>
+              <input type="email" class="form-control" placeholder="Introduce tu email">
+            </div>
+            <div class="form-group">
+              <label class="label-info">Contrasena</label>
+              <input type="password" class="form-control" placeholder="Contrasena">
+            </div>
+            <!-- boton como un enlace -->
+            <button type="submit" class="btn btn-link">Enviar</button>
+          </form>
+      </div>
+      <br>
+      <!-- formulario donde cada elemento del form-group intenta ocupar la MISMA LINEA 
+      LABEL AL LADO DEL INPUT PERO MALA ESTETICA PARA QUE QUEDE SIGUENTE LABEL DEBAJO 
+      -->
+      <div class="row">
+          <form class="form-inline col-md-offset-3">
+            <div class="form-group">
+              <label class="label-success">Email</label>
+              <input type="email" class="form-control" placeholder="Introduce tu email">
+            </div>
+            <div class="form-group">
+              <label class="label-info">Contrasena</label>
+              <input type="password" class="form-control" placeholder="Contrasena">
+            </div>
+            <button type="submit" class="btn btn-link">Enviar</button>
+          </form>
+      </div>
+      <br>
+      <!-- formulario donde cada elemento del form-horizontal 
+      y que cada form-group se comporte como una fila 
+      NO SE PUEDE USAR  form-control en los INPUT DIRECTAMENTE porque entonces ocupan el 100%
+      CADA LABEL AL LADO DE SU INPUT EN UNA LINEA
+      -->
+      <br>
+      <div class="row">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-md-1 col-md-offset-3">Email</label>
+              <div class="col-md-3">
+                <input type="email" class="form-control" placeholder="Introduce tu email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-1 col-md-offset-3">Contrasena</label>
+              <div class="col-md-3">
+                <input type="password" class="form-control" placeholder="Contrasena">
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="col-md-1 col-md-offset-3 btn btn-link">Enviar</button>
+            </div>
+          </form>
+      </div>
+      <br>
+      <!-- Agrupacion de botones con diferentes colores y formas -->
+      <br>
+      <div class="row">
+        <div class="btn-group col-md-offset-3">
+          <!-- boton pequeño y de color -->
+          <button class="btn btn-primary btn-sm">boton1</button>
+          <!-- boton de color -->
+          <button class="btn btn-danger">
+            <!-- con una ESTRELLA -->
+            <span class="glyphicon glyphicon-star"></span>boton2
+          </button>
+          <!-- boton pequeño y de color -->
+          <button class="btn btn-warning btn-lg">boton3</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

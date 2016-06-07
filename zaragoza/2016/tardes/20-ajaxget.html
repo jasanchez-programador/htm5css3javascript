@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>load AJAX</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<style type="text/css">
+		div {
+			background: lightgreen;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('p').on('click',function(){
+				console.log('pinchado');
+				$.get('http://localhost:8000/SimularRepuestaServidor.html',function(resp){
+						//funcion success
+						$('div').html(resp);
+				},'html')
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<p>Hazme click y modificamos DOM con AJAX sin recargar la página </p>
+	<br>
+	<div>
+		Aqui pintaremos el dato devuelto por el servidor
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>load AJAX</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<style type="text/css">
+		div {
+			background: lightgreen;
+		}
+	</style>
+	<script type="text/javascript">
+$(document).ready(function(){
+	$('p').on('click',function(){
+		console.log('pinchado');
+		$.getJSON('http://jsonplaceholder.typicode.com/posts',function(arr){
+			$('div').html(
+						$('<table>').css({"border-collapse":"collapse"})
+						);
+			// solo la cabecera con el primer jason del array
+			$.each(arr[0],function(k,v){
+				$('table').append(
+					$('<th>').css({"border":"5px solid darkRed"}).text(k)
+				)
+			})
+			//datos de la tabla
+			$.each(arr,function(pos,jason){
+				var fila = $('<tr>').appendTo($('table'));
+				$.each(jason,function(k,v){
+					fila.append(
+						$('<td>').css({"border":"2px solid darkOrange"}).text(v)
+					)
+				})
+			})
+		})
+	})
+})
+	</script>
+</head>
+
+<body>
+	<p>Hazme click y modificamos DOM con AJAX sin recargar la página </p>
+	<br>
+	<div>
+		Aqui pintaremos el dato devuelto por el servidor
+	</div>
+</body>
+</html>

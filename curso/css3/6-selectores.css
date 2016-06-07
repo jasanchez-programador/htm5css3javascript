@@ -1,0 +1,71 @@
+/* inicio colocacion */
+* {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid DarkOrange;
+}
+
+body {
+	display: inline-block;
+	width: 100%;
+}
+
+header {
+	text-align: center;
+}
+
+section,aside {
+	float: left;
+	width: 33.33%;
+}
+/* fin colocacion */
+/* inicio selectores */
+/* selectores de clase */
+.p2 {
+	text-align: center;
+}
+p.p3{
+	text-align: right;
+}
+
+/* selectores de id */
+#seccion1 {
+	background-color: LightBlue;
+}
+#seccion2 {
+	background-color: PaleGreen;
+}
+article p:first-child{
+	color: red;
+}
+section > p{
+	text-align: center;
+	background-color: tan;
+}
+
+p[class$="3"] {
+	font-size: 20px;
+}
+
+p:nth-child(2){
+	color: goldenrod;
+}
+
+article[name$="2"] {
+	background-color: white;
+} 
+
+a:link {
+	color: maroon;
+}
+
+a:visited {
+	color: olive;
+}
+
+aside > a {
+	display: block;
+}

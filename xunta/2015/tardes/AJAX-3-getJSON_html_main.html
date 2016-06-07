@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX load</title>		
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input#boton').on('click', function(){
+				//repuesta en html 
+				// que recive como parametro la funcion en jason
+				// que reemplaza al html del div con id stage
+				$.getJSON('http://localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso_tarde_xunta/AJAXRepuestaServidor.json',function(jason){
+					$('div#stage').html("<p>Nombre:" + jason.name + "<p>");
+					$('div#stage').append("<p>Edad:" + jason.age + "<p>");
+				},'html');
+			})
+		});
+	</script>
+
+</head>
+<body>
+	<p> Haz click en boton para cargar la página con una peticion AJAX</p>
+	<div id="stage" style="background:lightgreen">
+		STAGE
+	</div>
+	<br>
+	<input type="button" id="boton" value="boton">
+</body>
+</html>

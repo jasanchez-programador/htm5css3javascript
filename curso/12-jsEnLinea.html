@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<title>
+  		Ejemplo de uso con JavaScript EN LINEA
+  	</title>
+  </head>
+	<body>
+		<div id="principal">
+      <input type="button" value="saludar" onclick="(
+          function(){
+            var miP = document.createElement('p');
+            var textoP = document.createTextNode('Hola Mundo!!');
+            miP.appendChild(textoP);
+            document.getElementsByTagName('input')[0].parentNode.appendChild(miP);
+          }
+      )()">
+		</div>
+	</body>
+</html>

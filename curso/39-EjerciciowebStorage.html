@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='es'>
+<head>
+	<meta charset='UTF-8'/>
+	<title>sessionStorage con API WebStorage</title>
+	
+	<style>
+		div {
+			border: 2px solid Grey;
+			float: left;
+			padding: 25px;
+			margin: 10px;
+		}
+		
+	</style>
+	<script src="//localhost:8000/Documentos/MisCursos/HTML5_CSS_JavaScript-moviles/curso/javascript/39-EjerciciowebStorage.js"></script>
+</head>
+<body>
+	<div id="cajaformulario">
+		<form name='formulario'>
+			<p>Clave: <br /> 
+					<input type="text" name="clave" id="clave"></p>
+			<p>Valor: <br />
+					<textarea name="text" id="valor"></textarea></p>
+			<p><button name='grabar' id='grabar' disabled>Grabar</button></p>
+		</form>
+	</div>
+	<div id="datosGuardados">
+		<button id="mostrar">Recargar</button><br />
+		<div id='cajadatos'>
+			No hay informacion disponible
+		</div>
+	</div>
+	<div id="buscarGuardados">
+		<p>Clave a buscar: <br /> 
+					<input type="text" name="clavebusqueda" id="clavebusqueda"></p>
+		<button id="buscar" disabled>Buscar</button><br />
+		<div id='cajadato'>
+			No hay informacion disponible
+		</div>
+	</div>
+</body>
+</html>
