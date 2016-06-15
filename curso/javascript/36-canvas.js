@@ -20,7 +20,8 @@ window.onload = function() {
 	var elemento2 = document.getElementById('lienzo2');
 	miLienzo2 = elemento2.getContext('2d');
 
-	// createLinearGradient(incioX,inicioY,finX,finY)
+	// createLinearGradient(incioX,inicioY,finX,finY) 
+	// de la linea imaginaria que define la direccion
 	// var gradienteLineal = miLienzo2.createLinearGradient(0,10,20,50);
 
 	// var gradienteLineal = miLienzo2.createLinearGradient(1,1,101,101);// en diagonal /
@@ -36,6 +37,7 @@ window.onload = function() {
 
 	// Gradiente Radial
 	// createRadialGradient(incioX,inicioY,radioInicio,finX,finY,radioFin);
+	// del CIRCULO imaginario que define la direccion
 	// var gradienteRadial = miLienzo2.createRadialGradient(0,110,10,10,120,100);
 
 	// comienza en el centro con radio1 y termina con el radio total del cuadrado
@@ -79,12 +81,38 @@ window.onload = function() {
 	miLienzo2.closePath();// cierra el dibujo con linea desde donde acabo ultimo trazo al inicio
 
 
-	// pintar con el lapiz un triangulo
+	// pintar con el CIRCULOS
 	miLienzo2.beginPath();
-	miLienzo2.arc(150,200,10,0,360); //(empiezoX,empiezoY,radio,gradoInicio,gradoFin)
+	//(empiezoX,empiezoY,radio,gradoInicio,gradoFin,sentidReloj)
+	miLienzo2.arc(150,200,10,0*Math.PI,Math.PI,true);
 	miLienzo2.stroke();
-	miLienzo2.closePath();           // cierra el dibujo con linea desde donde acabo ultimo trazo al inicio
+	miLienzo2.fill();
+	 // cierra el dibujo con linea desde donde acabo ultimo trazo al inicio
+	miLienzo2.closePath();
 	
+	miLienzo2.beginPath();
+	miLienzo2.arc(180,200,10,0*Math.PI,Math.PI,false); 
+	miLienzo2.stroke();
+	miLienzo2.fill();
+	miLienzo2.closePath();
+
+	miLienzo2.beginPath();
+	miLienzo2.arc(210,200,10,0.5*Math.PI,1.5*Math.PI,true);
+	miLienzo2.stroke();
+	miLienzo2.fill();
+	miLienzo2.closePath();
+
+	miLienzo2.beginPath();
+	miLienzo2.arc(230,200,10,0.5*Math.PI,1.5*Math.PI,false);
+	miLienzo2.stroke();
+	miLienzo2.fill();
+	miLienzo2.closePath();
+
+	miLienzo2.beginPath();
+	miLienzo2.arc(250,200,10,0*Math.PI,2*Math.PI,true);
+	miLienzo2.stroke();
+	miLienzo2.fill();
+	miLienzo2.closePath();
 
 	// Dibujar un tablero de tres en raya
 	var elemento3 = document.getElementById('lienzo3');
@@ -131,7 +159,6 @@ window.onload = function() {
 	elemento3.textBaseline="button";
 	// El propio texto coordenadas de inicio
 	elemento3.fillText("mi texto",25,105);  
-	       
 	elemento3.closePath();				 
 
 	
@@ -147,4 +174,44 @@ window.onload = function() {
 		miLienzo4.drawImage(imagen,1,1,100,100);
 	};
 
+
+	// PRACTICA CONJUNTA
+	// dibujar como si fuera un lapiz con el raton
+	var elemento5 = document.getElementById('lienzo5');
+	miLienzo5 = elemento5.getContext('2d');
+
+	// CREO MI PROPIA FUNCION SOLO PARA LA INSTANCIA DEL LIENZO5
+	 miLienzo5.ratonLapiz = function(inicioX,inicioY){
+	 	var radio = 5;
+		this.beginPath();
+		this.arc(inicioX,inicioY,radio,0*Math.PI,2*Math.PI,true);
+		this.stroke();
+		this.fill();
+		this.closePath();
+	}
+	// Empezamos a pintar
+	elemento5.onmousedown = function(ev){
+		// donde esta el raton en la pantalla - donde esta la situado el canvas
+		var x = ev.pageX - elemento5.offsetLeft;
+		var y = ev.pageY - elemento5.offsetTop;
+		miLienzo5.ratonLapiz(x,y);
+		
+		// Pinto segun se mueve el raton
+		elemento5.onmousemove = function(ev2){
+			x = ev2.pageX - elemento5.offsetLeft;
+			y = ev2.pageY - elemento5.offsetTop;
+			miLienzo5.ratonLapiz(x,y);
+		}
+	}
+	// al dejar de pulsar con raton:
+	// vacio el evento de mover raton
+	// termino de pintar
+	elemento5.onmouseup = function(ev){
+		// dejo de pintar al mover raton
+		elemento5.onmousemove = "";
+		// cierro el trazo
+		x = ev.pageX - elemento5.offsetLeft;
+		y = ev.pageY - elemento5.offsetTop;
+		miLienzo5.ratonLapiz(x,y);
+	}
 }

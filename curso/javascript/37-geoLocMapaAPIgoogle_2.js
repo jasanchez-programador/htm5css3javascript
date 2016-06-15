@@ -85,9 +85,11 @@ $(document).ready(function(){
 			var marker = new google.maps.Marker({
 				position: posicionGoogle,
 				map: mapa,
+				//label: 'A',
 				title: "estas aqui",
 				animation: google.maps.Animation.BOUNCE,
-				icon: 'fotos/iconos/flower.gif'
+				icon: 'fotos/iconos/flower.gif',
+				draggable: true
 			});
 
 			var infowindow = new google.maps.InfoWindow({
@@ -100,10 +102,23 @@ $(document).ready(function(){
     			infowindow.open(mapa, marker);
   			});
 		},
-		function(elerror){
-			alert("CodigoError: " + elerror.code + " MensajeDeError: " + elerror.message);
+		function(err){
+			switch (err.code){
+				case err.PERMISSION_DENIED:
+		            alert("Debe usted permitir el acceso a su posición para que la aplicación pueda funcionar");
+		            break;
+		        case err.POSITION_UNAVAILABLE:
+		            alert("La información sobre su posición actual no está disponible");
+		            break;
+		        case err.TIMEOUT:
+		            alert("No he podido obtener su posición en un tiempo razonable");
+		            break;
+		        default:
+		            alert("CodigoError: " + elerror.code + " MensajeDeError: " + elerror.message);
+		            break;
+		    }				
 		},
-			tuneo);
+		tuneo);
 	});
 
 	$('#borrar').on('click',function(){

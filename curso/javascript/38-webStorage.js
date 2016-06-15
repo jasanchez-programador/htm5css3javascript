@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 	$('input#buscar').on('click',function(){
 		var cbus = $('input#claveBuscar').val();
-		var vbus = sessionStorage.getItem(cbus);
+		var vbus = sessionStorage.getItem(cbus) || "NO EXISTE CLAVE";
 		$('input#valorBuscar').attr('value',vbus);
 	});
 
@@ -20,6 +20,7 @@ $(document).ready(function(){
 		var cbor = $('input#claveBorrar').val();
 		sessionStorage.removeItem(cbor);
 		alert("borrado: " + cbor);
+		$('input[text]').val("");
 	});
 
 });

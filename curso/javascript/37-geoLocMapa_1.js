@@ -76,10 +76,23 @@ $(document).ready(function(){
 				// cambiamos el contenido de la seccion
 				zonamapa.innerHTML = mapa;
 		},
-			function(elerror){
-				alert("CodigoError: " + elerror.code + " MensajeDeError: " + elerror.message);
-			},
-			tuneo);
+		function(err){
+			switch (err.code){
+				case err.PERMISSION_DENIED:
+		            alert("Debe usted permitir el acceso a su posición para que la aplicación pueda funcionar");
+		            break;
+		        case err.POSITION_UNAVAILABLE:
+		            alert("La información sobre su posición actual no está disponible");
+		            break;
+		        case err.TIMEOUT:
+		            alert("No he podido obtener su posición en un tiempo razonable");
+		            break;
+		        default:
+		            alert("CodigoError: " + elerror.code + " MensajeDeError: " + elerror.message);
+		            break;
+		    }				
+		},
+		tuneo);
 	});
 	
 	$('#borrar').on('click',function(){
@@ -88,7 +101,7 @@ $(document).ready(function(){
 		navigator.geolocation.clearWatch(geoId);
 		// recargo la pagina para comenzar
 		//location.reload();
-		var m document.getElementById('mapa');
+		var m = document.getElementById('mapa');
 		m.innerHTML="";
 
 	});

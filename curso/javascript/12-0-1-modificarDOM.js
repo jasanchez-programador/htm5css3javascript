@@ -53,8 +53,8 @@ Modificar el estilo del parrafo que queda envolviendolo en <h1> y
 color de fondo negro
 	*/
 	// PRIMERO: incluir cabecera <h1>
-	var queEs = nuevoParrafo.innerHTML;
-	nuevoParrafo.innerHTML = '<h1>' + queEs + '</h1>';
+	var queEs = nuevoParrafo.outerHTML;
+	nuevoParrafo.outerHTML = '<h1>' + queEs + '</h1>';
 	// actualizamos el estilo del parrafo
 	var miParrafoMod = document.getElementsByName("nuevoP")[0];
 	if (miParrafoMod.hasAttribute("style")){
@@ -63,5 +63,12 @@ color de fondo negro
 		var valorAttr = valorAttrActual + valorAttrIncluir;
 		miParrafoMod.setAttribute("style", valorAttr);
 	}
+
+	// poner un titulo para mostrar al poner el raton encima!!
+	// poner un borde rojo al parrafo final y limitar su anchura al 50%
+	// accediendo a los atributos como atributos
+	miParrafoMod.title = "el ultimo cambio con JS";
+	miParrafoMod.style.width = "50%";
+	miParrafoMod.style.border = "2px solid darkRed"; 
 }
 window.onload=inicio;

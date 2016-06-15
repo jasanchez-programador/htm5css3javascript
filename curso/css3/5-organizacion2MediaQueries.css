@@ -15,12 +15,18 @@
 }
 
 /* borde para identificar elementos */
-header,nav,section,article,aside,footer,table,tr {
+header,nav,section,article,aside,footer,table,caption,td {
 	border: 1px solid DarkOrange;
+}
+img{
+	width: 20%;
+}
+figcaption{
+	padding: 1%;
 }
  
 /* Que su informacion este centrada en la pantalla */
-header,nav,footer{
+header,nav,footer,caption,td{
 	text-align: center;
 }
 /* como situo a los elementos de la lista */
@@ -42,6 +48,10 @@ body {
 	display: inline-block;
 	width: 100%;
 }
+table{
+	border-collapse: collapse;
+}
+
 header,nav,table{
 	/* 	ocupan el 100% del dispositivo, una debajo de otra */
 	width: 100%;
@@ -50,11 +60,10 @@ header,nav,table{
 	en la estructura de cajas la seccion a la izquierda y el aside a la derecha	
 */
 section,aside {
-	width: 33.3%;
+	width: 33.3333333%;
 	float: left;
 	/* Por si alguien dice que el borde de aside no llega al final */
 	/*height: 127px;*/
-	
 }
 
 section > article {
@@ -62,12 +71,12 @@ section > article {
 	su ancho esta limitado al section
 	entre los 3 me aseguro que no superen el 100% del section
 	se van colocando en orden hacia la izq. */
-	width: 33.3%;
+	width: 33.3333333%;
 	float: left;
 }
 
 /* que las filas impares tengan fondo rojo */
-tr:nth-child(2n){
+tr:nth-child(2n+1){
 	background-color: moccasin;
 }
 
@@ -168,6 +177,7 @@ Todo uno debajo de otro
 @media screen and (max-width: 600px) { 
 	body{
 		background-color: lightpink;
+		min-width: 400px;
 	}
 	li {
 		display: block; /* unos al lado de otros, sobreescribe los siguentes */

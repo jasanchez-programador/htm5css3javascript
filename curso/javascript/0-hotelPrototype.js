@@ -39,6 +39,7 @@ window.onload=function(){
     return quedan;
   };
 
+  // si no ponemos new, las propiedades del hotel son GLOBALES y pertenecen al objeto window
   var hotel = new Hotel("sol", 10, 7);
   console.log("disponibles: " + hotel.disponibilidad());
   hotel.reservar(2);
