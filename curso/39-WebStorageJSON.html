@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>Ejemplo Storage</title>
+</head>
+<body>
+	<section class="container">
+		<br>
+		<article class="row">
+			<form class="form-inline col-md-offset-3">
+				<input id="kgu" type="text" class="form-control" placeholder="clave a guardar">
+				<button id="guardar" type="button" class="btn btn-primary">
+					Guardar
+				</button>
+				<input id="vgu" type="text" class="form-control" placeholder="valor a guardar">
+			</form>
+		</article>
+		<hr>
+		<article class="row">
+			<form class="form-inline col-md-offset-3">
+				<input id="kbu" type="text" class="form-control" placeholder="clave a buscar">
+				<button id="buscar" type="button" class="btn btn-success">
+					Buscar
+				</button>
+				<input id="vbu" type="text" class="form-control" placeholder="valor encontrado" readonly>
+			</form>
+		</article>
+		<hr>
+		<article class="row">
+			<form class="form-inline col-md-offset-4">
+				<input id="kbo" type="text" class="form-control" placeholder="clave a borrar">
+				<button id="borrar" type="button" class="btn btn-danger">
+					Borrar
+				</button>
+			</form>
+		</article>	
+	</section>
+	
+</body>
+<script src="js/39-WebStorageJSON.js"></script>
+</html>

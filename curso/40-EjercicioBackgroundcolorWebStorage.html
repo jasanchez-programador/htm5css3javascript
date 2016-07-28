@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>Preferencias de color de fondo en WebStorage</title>
+</head>
+<body>
+	<section class="container">
+		<br>
+		<article class="row">
+			<form class="form-inline col-md-offset-3">
+				<input id="uc" type="text" class="form-control" placeholder="Usuario a crear">
+				<button id="crear" type="button" class="btn btn-primary">
+					Crear
+				</button>
+				<input id="fav" type="color">
+			</form>
+		</article>
+		<hr>
+		<article class="row">
+			<form class="form-inline col-md-offset-3">
+				<label class="col-md-3">Elige usuario para poner su color de fondo favorito</label>
+				<select name="usuarios" id="usuarios" class="form-control">
+					<option>Selecciona Usuario de la lista</option>
+				</select>
+			</form>
+		</article>
+		<hr>
+		<article class="row">
+			<form class="form-inline col-md-offset-3">
+				<input id="ub" type="text" class="form-control" placeholder="usuario a borrar">
+				<button id="borrar" type="button" class="btn btn-danger">
+					Borrar
+				</button>
+			</form>
+		</article>	
+	</section>
+	
+</body>
+<script src="js/40-EjercicioBackgroundcolorWebStorage.js"></script>
+</html>
